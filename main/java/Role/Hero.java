@@ -2,12 +2,12 @@ package Role;
 
 public class Hero {
 
-    private String name;  //姓名
-    private int hp;  //血量
-    private int maxhp;  //最大血量
-    private int attack;  //攻击
-    private int defend;  //防御
-    private int gold;  //金币
+    private String name;
+    private int hp;        //hit point
+    private int maxhp;
+    private int attack;
+    private int defend;
+    private int gold;  //profit
 
 
     public Hero() { }
