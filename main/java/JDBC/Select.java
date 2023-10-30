@@ -10,8 +10,8 @@ import java.sql.ResultSetMetaData;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Select {  //查询
-    public <T> List<T> getForList(Class<T> clazz, String sql, Object... args){  //反射
+public class Select {
+    public <T> List<T> getForList(Class<T> clazz, String sql, Object... args){    //Reflection
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -24,24 +24,24 @@ public class Select {  //查询
             }
 
             rs = ps.executeQuery();
-            // 获取结果集的元数据 :ResultSetMetaData
+            // Getting metadata for the result set: ResultSetMetaData
             ResultSetMetaData rsmd = rs.getMetaData();
-            // 通过ResultSetMetaData获取结果集中的列数
+            // Getting the number of columns in a result set from ResultSetMetaData
             int columnCount = rsmd.getColumnCount();
-            //创建集合对象
+            // creating arraylist objects
             ArrayList<T> list = new ArrayList<T>();
             while (rs.next()) {
                 T t = clazz.newInstance();
-                // 处理结果集一行数据中的每一个列:给t对象指定的属性赋值
+                // Processing each column in a row of data in the result set: Assign a value to the specified attribute of the 't' object
                 for (int i = 0; i < columnCount; i++) {
-                    // 获取列值
+                    // Getting the column values
                     Object columValue = rs.getObject(i + 1);
 
-                    // 获取每个列的列名
+                    // Getting each columns' name
                     // String columnName = rsmd.getColumnName(i + 1);
                     String columnLabel = rsmd.getColumnLabel(i + 1);
 
-                    // 给t对象指定的columnName属性，赋值为columValue：通过反射
+                    // Assign the columnName attribute of the t object to the columValue：Reflection
                     Field field = clazz.getDeclaredField(columnLabel);
                     field.setAccessible(true);
                     field.set(t, columValue);
