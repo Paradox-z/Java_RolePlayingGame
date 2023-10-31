@@ -90,28 +90,28 @@ public class Menu {
     }
 
     public Monster getMonster(){
-        //创建一个Random对象
+        // create a Random object
         Random random = new Random();
-        //使用random.nextInt(x)方法
-        //[0, x - 1]中的任意一个整数 (两边都是闭区间)
-        //则此处randomIndex为list中任意元素的下标
+        // use random.nextInt(x)
+        // a random integer among [0, x - 1]
+        // randomIndex is the index from an arbitrary element in list.
         int randomIndex = random.nextInt(monsters.size());
 
         return monsters.get(randomIndex);
     }
 
     public Hero getHero(){
-        //创建一个Random对象
+        // create a Random object
         Random random = new Random();
-        //使用random.nextInt(x)方法
-        //[0, x - 1]中的任意一个整数 (两边都是闭区间)
-        //则此处randomIndex为list中任意元素的下标
+        // use random.nextInt(x)
+        // a random integer among [0, x - 1]
+        // randomIndex is the index from an arbitrary element in list.
         int randomIndex = random.nextInt(heroes.size());
 
         return heroes.get(randomIndex);
     }
 
-    public void store(){  //商城
+    public void store(){
         Scanner input=new Scanner(System.in);
 
         for (;;){
@@ -163,7 +163,7 @@ public class Menu {
         }
     }
 
-    public void solo(){  //武馆
+    public void solo(){
         Scanner input=new Scanner(System.in);
 
         for (;;){
@@ -225,7 +225,7 @@ public class Menu {
             }
         }
     }
-    public void wilds(){  //野外
+    public void wilds(){
 
         Scanner input=new Scanner(System.in);
         Monster monster=getMonster();
