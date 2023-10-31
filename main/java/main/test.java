@@ -8,15 +8,15 @@ import java.util.List;
 
 public class test {
 //    public static void main(String[] args) {
-//        Select s = new Select();  //查询类
+//        Select s = new Select();  // Class Select
 //
-//        String sql = "select name,hp,maxhp,attack,defend,gold from hero";  //查询
-//        List<Hero> list = s.getForList(Hero.class,sql);  //查询整个表的所有数据
+//        String sql = "select name,hp,maxhp,attack,defend,gold from hero";  // select action
+//        List<Hero> list = s.getForList(Hero.class,sql);  // get all data from the whole table
 //        //System.out.println("\tname\tprice\tauthor\tnum");
 //        list.forEach(System.out::println);
 //
-//        String sql1 = "select name,hp,attack,defend,gold from monster";  //查询
-//        List<Monster> list1 = s.getForList(Monster.class,sql1);  //查询整个表的所有数据
+//        String sql1 = "select name,hp,attack,defend,gold from monster";  // select action
+//        List<Monster> list1 = s.getForList(Monster.class,sql1);  // get all data from the whole table
 //        list1.forEach(System.out::println);
 //
 //    }
