@@ -11,36 +11,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Select {
-    public <T> List<T> getForList(Class<T> clazz, String sql, Object... args){    //Reflection
+    public <T> List<T> getForList(Class<T> clazz, String sql, Object... args){    //For reflection
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
         try {
             conn = JDBCUtils.getConnection();
-
             ps = conn.prepareStatement(sql);
             for (int i = 0; i < args.length; i++) {
                 ps.setObject(i + 1, args[i]);
             }
-
             rs = ps.executeQuery();
-            // Getting metadata for the result set: ResultSetMetaData
+            // Get metadata for the result set: ResultSetMetaData
             ResultSetMetaData rsmd = rs.getMetaData();
-            // Getting the number of columns in a result set from ResultSetMetaData
+            // Get the number of columns in a result set from ResultSetMetaData
             int columnCount = rsmd.getColumnCount();
-            // creating arraylist objects
+            // create arraylist objects
             ArrayList<T> list = new ArrayList<T>();
             while (rs.next()) {
                 T t = clazz.newInstance();
                 // Processing each column in a row of data in the result set: Assign a value to the specified attribute of the 't' object
                 for (int i = 0; i < columnCount; i++) {
-                    // Getting the column values
+                    // Get the column values
                     Object columValue = rs.getObject(i + 1);
-
-                    // Getting each columns' name
+                    // Get each columns' name
                     // String columnName = rsmd.getColumnName(i + 1);
                     String columnLabel = rsmd.getColumnLabel(i + 1);
-
                     // Assign the columnName attribute of the t object to the columValue：Reflection
                     Field field = clazz.getDeclaredField(columnLabel);
                     field.setAccessible(true);

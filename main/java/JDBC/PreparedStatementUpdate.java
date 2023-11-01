@@ -6,30 +6,29 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 /*
- * 使用PreparedStatement实现对数据表的增删改操作
- *
+Utilise PreparedStatement to implement mysql actions.
  */
 public class PreparedStatementUpdate {
 
-    //通用的增删改操作
-    public void update(String sql,Object ...args){ //sql中占位符的个数与可变形参的长度相同！
+    // Universal actions
+    public void update(String sql,Object ...args){ // The number in placeholders of sql is equal to the length of transformable parameter.
         Connection conn = null;
         PreparedStatement ps = null;
         try {
-            //1.获取数据库的连接
+            // 1st. Connnet to database
             conn = JDBCUtils.getConnection();
-            //2.预编译sql语句，返回PreparedStatement的实例
+            // 2nd. Pre-compile sql statement, return to the stances of PreparedStatement.
             ps = conn.prepareStatement(sql);
-            //3.填充占位符
+            // 3rd. Populate placeholders
             for(int i = 0;i < args.length;i++){
-                ps.setObject(i + 1, args[i]);//小心参数声明错误！！
+                ps.setObject(i + 1, args[i]);    // Watch out parameter statement.
             }
-            //4.执行
+            // 4th. Execute the process
             ps.execute();
         } catch (Exception e) {
             e.printStackTrace();
         }finally{
-            //5.资源的关闭
+            // 5th. Resource closure
             JDBCUtils.closeResource(conn, ps);
         }
     }
