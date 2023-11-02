@@ -3,11 +3,11 @@ package Role;
 public class Hero {
 
     private String name;
-    private int hp;        //hit point
+    private int hp;        //hit points
     private int maxhp;
     private int attack;
     private int defend;
-    private int gold;  //profit
+    private int gold;  //gold gain
 
 
     public Hero() { }
