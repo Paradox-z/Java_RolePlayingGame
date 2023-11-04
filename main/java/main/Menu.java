@@ -37,7 +37,7 @@ public class Menu {
             heroes.add(hero1);
         }
 
-        System.out.println("请选择你的英雄（输入当前显示的序号来选择）");
+        System.out.println("Your load, please choose the character you like! (Type one of the displaying number.)");
         for (int i=0;i<heroes.size();i++) {
             System.out.println((i+1)+" "+heroes.get(i));
         }
@@ -66,11 +66,11 @@ public class Menu {
     public void beginnerVillage(){
         Scanner input=new Scanner(System.in);
         for(;;){
-            System.out.println("欢迎勇者"+hero.getName()+"来到冒险村~");
-            System.out.println("1、查看状态");
-            System.out.println("2、商城");
-            System.out.println("3、武馆");
-            System.out.println("4、野外");
+            System.out.println("Welcome challenger "+hero.getName()+" to our Adventure country.");
+            System.out.println("1. Character status");
+            System.out.println("2. Mall");
+            System.out.println("3. Martial club");
+            System.out.println("4. Wilds");
             String choose=input.next();
             if(choose.equals("1")){
                 System.out.println(hero);
