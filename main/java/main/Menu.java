@@ -66,7 +66,7 @@ public class Menu {
     public void beginnerVillage(){
         Scanner input=new Scanner(System.in);
         for(;;){
-            System.out.println("Welcome challenger "+hero.getName()+" to our Adventure country.");
+            System.out.println("Welcome challenger "+hero.getName()+" to our Adventure country!");
             System.out.println("1. Character status");
             System.out.println("2. Mall");
             System.out.println("3. Martial club");
@@ -115,12 +115,12 @@ public class Menu {
         Scanner input=new Scanner(System.in);
 
         for (;;){
-            System.out.println("欢迎勇者"+hero.getName()+"来到商城！");
-            System.out.println("1、购买武器");
-            System.out.println("2、购买护甲");
-            System.out.println("3、购买生命值上限");
-            System.out.println("4、查看英雄状态");
-            System.out.println("5、回城");
+            System.out.println("Welcome challenger "+hero.getName()+" to our Mall!");
+            System.out.println("1. Weapon");
+            System.out.println("2. Armour");
+            System.out.println("3. Physical attributes");
+            System.out.println("4. Character status");
+            System.out.println("5. Town");
             String choose=input.next();
 
             if(choose.equals("1")){
