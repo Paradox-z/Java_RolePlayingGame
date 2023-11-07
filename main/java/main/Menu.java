@@ -127,30 +127,30 @@ public class Menu {
                 if(hero.getGold() >= 20){
                     hero.setAttack(hero.getAttack() + 10);
                     hero.setGold(hero.getGold() - 20);
-                    System.out.println("购买成功,攻击加10点，花费20金币");
+                    System.out.println("Purchase successfully, Attack + 10, Cost 20 Gold.");
                 }
                 else{
-                    System.out.println("购买失败，金币不足");
+                    System.out.println("Purchase failed, lack of Gold.");
                 }
             }
             else if(choose.equals("2")){
                 if(hero.getGold() >= 20){
                     hero.setDefend(hero.getDefend() + 5);
                     hero.setGold(hero.getGold() - 20);
-                    System.out.println("购买成功,防御加10点，花费20金币");
+                    System.out.println("Purchase successfully, Defence + 10, Cost 20 Gold.");
                 }
                 else{
-                    System.out.println("购买失败，金币不足");
+                    System.out.println("Purchase failed, lack of Gold.");
                 }
             }
             else if(choose.equals("3")){
                 if(hero.getGold() >= 20){
                     hero.setMaxhp(hero.getMaxhp() + 15);
                     hero.setGold(hero.getGold() - 20);
-                    System.out.println("购买成功,生命加15点，花费20金币");
+                    System.out.println("Purchase successfully, HP + 10, Cost 20 Gold.");
                 }
                 else{
-                    System.out.println("购买失败，金币不足");
+                    System.out.println("Purchase failed, lack of Gold.");
                 }
             }
             else if(choose.equals("4")){
