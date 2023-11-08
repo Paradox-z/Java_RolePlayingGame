@@ -167,14 +167,14 @@ public class Menu {
         Scanner input=new Scanner(System.in);
 
         for (;;){
-            System.out.println("欢迎勇者"+hero.getName()+"来到武馆！");
-            System.out.println("1、查看英雄榜");
-            System.out.println("2、决斗");
-            System.out.println("3、回城");
+            System.out.println("Welcome challenger "+hero.getName()+" to the Martial club!");
+            System.out.println("1. View hero ranking");
+            System.out.println("2. Solo");
+            System.out.println("3. Town");
             String choose=input.next();
 
             if(choose.equals("1")){
-                System.out.println("英雄榜");
+                System.out.println("Hero Ranking");
                 for (int i=0;i<heroes.size();i++) {
                     System.out.println((i+1)+" "+heroes.get(i));
                 }
@@ -184,9 +184,9 @@ public class Menu {
 
                 for(;;){
                     int lose = hero.getAttack()-soloHero.getDefend();
-                    System.out.println(hero.getName()+"超强攻击，给"+soloHero.getName()+"来了一套组合拳打脚踢");
+                    System.out.println(hero.getName()+"Super Attacked, gave "+soloHero.getName()+" a combination of punches and kickes.");
                     soloHero.setHp(soloHero.getHp()-lose);
-                    System.out.println(soloHero.getName()+"剩余"+soloHero.getHp());
+                    System.out.println(soloHero.getName()+"Remaining "+soloHero.getHp());
 
                     try {
                         Thread.sleep(1000);
@@ -195,7 +195,7 @@ public class Menu {
                     }
 
                     if(soloHero.getHp()<=0){
-                        System.out.println(hero.getName()+"胜利，获得"+soloHero.getGold()+"金币");
+                        System.out.println(hero.getName()+"Victory, gained "+soloHero.getGold()+" Gold.");
                         hero.setGold(hero.getGold()+soloHero.getGold());
                         break;
                     }
@@ -206,10 +206,10 @@ public class Menu {
                         e.printStackTrace();
                     }
                     lose = soloHero.getAttack()-hero.getDefend();
-                    System.out.println(soloHero.getName()+"直接给"+hero.getName()+"一个超级暴击");
+                    System.out.println(soloHero.getName()+" gave "+hero.getName()+" a critical strike straight way");
 
                     hero.setHp(hero.getHp()-lose);
-                    System.out.println(hero.getName()+"剩余"+hero.getHp()+"/"+hero.getMaxhp());
+                    System.out.println(hero.getName()+"Remaining "+hero.getHp()+"/"+hero.getMaxhp());
 
                     if(hero.getHp()<=0){
                         System.out.println("You Died");
