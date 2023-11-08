@@ -230,7 +230,7 @@ public class Menu {
         Scanner input=new Scanner(System.in);
         Monster monster=getMonster();
         for(;;){
-            System.out.println("欢迎勇者"+hero.getName()+"来到野外！");
+            System.out.println("Welcome challenger "+hero.getName()+" to the Wilds!");
             System.out.println("1、查看状态");
             System.out.println("2、查看怪物信息");
             System.out.println("3、砍怪");
