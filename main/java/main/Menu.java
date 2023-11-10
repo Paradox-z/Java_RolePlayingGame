@@ -206,13 +206,13 @@ public class Menu {
                         e.printStackTrace();
                     }
                     lose = soloHero.getAttack()-hero.getDefend();
-                    System.out.println(soloHero.getName()+" gave "+hero.getName()+" a critical strike straight way");
+                    System.out.println(soloHero.getName()+" gave "+hero.getName()+" a critical strike straight way.");
 
                     hero.setHp(hero.getHp()-lose);
                     System.out.println(hero.getName()+"Remaining "+hero.getHp()+"/"+hero.getMaxhp());
 
                     if(hero.getHp()<=0){
-                        System.out.println("You Died");
+                        System.out.println("YOU DIED");
                         System.exit(0);
                         break;
                     }
@@ -231,10 +231,10 @@ public class Menu {
         Monster monster=getMonster();
         for(;;){
             System.out.println("Welcome challenger "+hero.getName()+" to the Wilds!");
-            System.out.println("1、查看状态");
-            System.out.println("2、查看怪物信息");
-            System.out.println("3、砍怪");
-            System.out.println("4、回城");
+            System.out.println("1. Character status");
+            System.out.println("2. View enemy information");
+            System.out.println("3. Fight");
+            System.out.println("4. Town");
             String choose=input.next();
 
             if(choose.equals("1")){
@@ -246,9 +246,9 @@ public class Menu {
             else if(choose.equals("3")){
                 for(;;){
                     int lose = hero.getAttack()-monster.getDefend();
-                    System.out.println(hero.getName()+"施展技能，给"+monster.getName()+"来了一套拳打脚踢");
+                    System.out.println(hero.getName()+"Super Attacked, gave "+monster.getName()+" a combination of punches and kickes.");
                     monster.setHp(monster.getHp()-lose);
-                    System.out.println(monster.getName()+"剩余"+monster.getHp());
+                    System.out.println(monster.getName()+"Remaining "+monster.getHp());
 
                     try {
                         Thread.sleep(1000);
@@ -257,7 +257,7 @@ public class Menu {
                     }
 
                     if(monster.getHp()<=0){
-                        System.out.println(hero.getName()+"胜利，获得"+monster.getGold()+"金币");
+                        System.out.println(hero.getName()+"Victory, gained "+monster.getGold()+" Gold.");
                         hero.setGold(hero.getGold()+monster.getGold());
                         monster=getMonster();
                         break;
@@ -269,14 +269,14 @@ public class Menu {
                         e.printStackTrace();
                     }
                     lose = monster.getAttack()-hero.getDefend();
-                    System.out.println(monster.getName()+"直接给"+hero.getName()+"一个暴击");
+                    System.out.println(monster.getName()+" gave "+hero.getName()+" a critical strike straight way.");
 
                     hero.setHp(hero.getHp()-lose);
-                    System.out.println(hero.getName()+"剩余"+hero.getHp()+"/"+hero.getMaxhp());
+                    System.out.println(hero.getName()+"Remaining "+hero.getHp()+"/"+hero.getMaxhp());
 
 
                     if(hero.getHp()<=0){
-                        System.out.println("You Died");
+                        System.out.println("YOU DIED");
                         System.exit(0);
                         break;
                     }
