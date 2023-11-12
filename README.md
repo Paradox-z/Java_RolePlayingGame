@@ -1,9 +1,9 @@
 # :video_game: Java_RolePlayingGame
-## :rock: Project background
+## :bricks: Project background
 In this martial arts-themed RPG project, players assume the role of one of the characters in the story and complete quests in the training phase to meet the requirements.
 
 ## :books: Project content
-**-1-** Design the program framework, with the user interface for front-end interaction and the backend for response and execution functions.
+**-1-** Design the program framework, with the user interface for front-end interaction and the backend for response and execution functions.  
 **-2-** Database design, pre-build table specifications, and establish connections.
 
 ## :sparkles: Project highlights
