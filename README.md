@@ -7,4 +7,4 @@ In this martial arts-themed RPG project, players assume the role of one of the c
 **-2-** Database design, pre-build table specifications, and establish connections.
 
 ## :sparkles: Project highlights
-**--** A complete RPG game basic gameplay has been implemented, including character system, weapon system, and quest system. The character system supports attribute selection, level up, and combat power viewing. The quest system supports random monster challenges. The weapon system uses equipment to improve character attributes.
+A complete RPG game basic gameplay has been implemented, including character system, weapon system, and quest system. The character system supports attribute selection, level up, and combat power viewing. The quest system supports random monster challenges. The weapon system uses equipment to improve character attributes.
