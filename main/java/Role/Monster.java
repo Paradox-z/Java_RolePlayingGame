@@ -3,10 +3,10 @@ package Role;
 public class Monster {
 
     private String name;
-    private int hp;        //hit points
+    private int hp;        //Settings for characters, attributes, and so on.
     private int attack;
     private int defend;
-    private int gold;       //gold gain
+    private int gold;
 
     public String getName() {
         return name;
